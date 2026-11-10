@@ -6,7 +6,10 @@
 #![windows_subsystem = "windows"]
 
 mod app;
+mod recycle;
+mod rules;
 mod settings;
+mod tidy;
 mod update;
 
 fn main() {
