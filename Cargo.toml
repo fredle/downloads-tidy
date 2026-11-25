@@ -1,6 +1,6 @@
 [package]
 name = "downloads_tidy"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Rule-based Downloads folder sorter with preview and one-click undo."
 repository = "https://github.com/fredle/downloads-tidy"
