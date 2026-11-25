@@ -20,7 +20,7 @@ Want it hands-off? Turn on the schedule and Downloads Tidy runs while the app is
 
 It works on any folder, including a Downloads folder you have moved to another drive.
 
-Private by design: no accounts, no telemetry, no admin rights. Your files and file names stay on your PC. The only network use is an optional daily check for app updates.
+Private by design: no accounts, no telemetry, no admin rights. Your files and file names stay on your PC. The only network use is an optional daily check for app updates, and a feedback note if you choose to send one.
 
 ## Product features
 
@@ -60,6 +60,8 @@ Productivity > Utilities (alternatively Utilities & tools > File management)
 Stored locally in `%LOCALAPPDATA%\DownloadsTidy\`: your settings (folder, rules, schedule, update preference) and a log of the last tidy run so it can be undone. Nothing is uploaded.
 
 Network: the app checks GitHub Releases for new versions about once a day (can be turned off in the app footer). No file names, paths or usage data are sent. No telemetry, no accounts, no admin rights.
+
+Feedback: the "What would make this better?" link in the window lets you send the developer a short note. Only the note, the app's name and version, and the platform are sent, to the developer's server at feedback.leatham.net, and only when you press Send. No name, email address or device identifier is sent, and the server does not keep IP addresses. Notes are used only to improve the app and are never shared or sold.
 
 ## Screenshot ideas
 

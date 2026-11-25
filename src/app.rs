@@ -43,6 +43,8 @@ enum Status {
 pub struct App {
     settings: crate::settings::Settings,
     version: String,
+    /// "What would make this better?" (src/feedback.rs).
+    feedback: crate::feedback::Feedback,
     tab: Tab,
     /// Folder text box contents (committed to settings on change).
     folder_text: String,
@@ -62,6 +64,7 @@ impl App {
             folder_text: settings.folder.clone(),
             settings,
             version: crate::update::current_version(),
+            feedback: Default::default(),
             tab: Tab::Preview,
             plan: None,
             status: None,
@@ -589,6 +592,8 @@ impl App {
             }
             ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                 ui.weak(format!("v{}", self.version));
+                ui.add_space(8.0);
+                self.feedback.link(ui);
             });
         });
     }
@@ -601,5 +606,7 @@ impl eframe::App for App {
         self.tick_schedule(&ctx);
         egui::Panel::bottom("footer").show(ui_root, |ui| self.footer(ui));
         egui::CentralPanel::default().show(ui_root, |ui| self.main_ui(ui));
+            let feedback_ctx = ui_root.ctx().clone();
+        self.feedback.show(&feedback_ctx, &self.version, false);
     }
 }
